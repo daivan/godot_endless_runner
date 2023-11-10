@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dpngtyxycdddf"]
+[gd_scene load_steps=2 format=3 uid="uid://dpngtyxycdddf"]
+
+[ext_resource type="PackedScene" uid="uid://bpf4i5uxb8grb" path="res://player.tscn" id="1_ol6eh"]
 
 [node name="Level" type="Node2D"]
 
@@ -7,3 +9,6 @@ offset_right = 180.0
 offset_bottom = 83.0
 text = "Hej hur e läget"
 placeholder_text = "hej hur el äget"
+
+[node name="Player" parent="." instance=ExtResource("1_ol6eh")]
+position = Vector2(232, 41)
