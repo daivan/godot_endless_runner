@@ -28,3 +28,6 @@ func _on_death_timer_timeout():
 func _on_area_2d_body_entered(body):
 	if body.is_in_group("Player"):
 		body.queue_free()
+		GameState.isPlaying = false
+		GameState.updateHighscore()
+		get_tree().change_scene_to_file("res://start_menu.tscn")

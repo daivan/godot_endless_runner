@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b508halphp6ff"]
+[gd_scene load_steps=8 format=3 uid="uid://b508halphp6ff"]
 
+[ext_resource type="Script" path="res://level_1.gd" id="1_5ix56"]
 [ext_resource type="Texture2D" uid="uid://csh2irqs61qkt" path="res://assets/Tilemap/tilemap-backgrounds.png" id="1_7qcxt"]
 [ext_resource type="PackedScene" uid="uid://bpf4i5uxb8grb" path="res://player.tscn" id="1_8aukx"]
+[ext_resource type="PackedScene" uid="uid://clqvy8hg1g1um" path="res://ui.tscn" id="3_k7pgf"]
 [ext_resource type="PackedScene" uid="uid://dcs01f0nvu1d6" path="res://obstacle_spawner.tscn" id="3_sisf4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dtje8"]
@@ -160,6 +162,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_dtje8")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_5ix56")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_axe4u")
@@ -172,6 +175,9 @@ layer_0/tile_data = PackedInt32Array(262142, 0, 0, 327678, 0, 1, 262143, 65536, 
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UserInterface" parent="Camera2D" instance=ExtResource("3_k7pgf")]
+custom_minimum_size = Vector2(700, 400)
 
 [node name="ObstacleSpawner" parent="." instance=ExtResource("3_sisf4")]
 position = Vector2(603, 58)

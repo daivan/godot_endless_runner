@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://clqvy8hg1g1um"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_ojr1t"]
+
+[node name="UserInterface" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ojr1t")
+
+[node name="HighScoreLabel" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 29.0
+offset_right = 88.0
+offset_bottom = 55.0
+text = "HighScore: "
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score: "
+
+[node name="HighScoreText" type="Label" parent="."]
+offset_left = 91.0
+offset_top = 29.0
+offset_right = 131.0
+offset_bottom = 52.0
+
+[node name="ScoreText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 2.0
+offset_right = 92.0
+offset_bottom = 25.0
