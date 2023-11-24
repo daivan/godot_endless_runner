@@ -1,17 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b508halphp6ff"]
+[gd_scene load_steps=6 format=3 uid="uid://b508halphp6ff"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5ix56"]
 [ext_resource type="PackedScene" uid="uid://bpf4i5uxb8grb" path="res://player.tscn" id="1_8aukx"]
-[ext_resource type="PackedScene" uid="uid://dd3dh41kr4fpl" path="res://floor.tscn" id="2_ossp6"]
 [ext_resource type="PackedScene" uid="uid://clqvy8hg1g1um" path="res://ui.tscn" id="3_k7pgf"]
 [ext_resource type="PackedScene" uid="uid://dcs01f0nvu1d6" path="res://obstacle_spawner.tscn" id="3_sisf4"]
 [ext_resource type="PackedScene" uid="uid://b2yq75gabwrjb" path="res://parallax.tscn" id="6_0x0wj"]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_5ix56")
-
-[node name="Floor" parent="." instance=ExtResource("2_ossp6")]
-position = Vector2(0, 400)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_8aukx")]
 position = Vector2(282, 214)
@@ -20,16 +16,22 @@ position = Vector2(282, 214)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(282, 214)
+position = Vector2(386, 182)
 
 [node name="UserInterface" parent="Camera2D" instance=ExtResource("3_k7pgf")]
 custom_minimum_size = Vector2(700, 400)
-offset_left = 220.0
-offset_top = -9.0
-offset_right = 920.0
-offset_bottom = 391.0
+offset_left = -171.0
+offset_top = -132.0
+offset_right = 529.0
+offset_bottom = 268.0
 
 [node name="ObstacleSpawner" parent="." instance=ExtResource("3_sisf4")]
 position = Vector2(603, 82)
 
 [node name="Parallax" parent="." instance=ExtResource("6_0x0wj")]
+
+[node name="FloorTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="FloorTimer" to="." method="_on_floor_timer_timeout"]

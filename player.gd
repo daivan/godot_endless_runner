@@ -13,7 +13,7 @@ func _ready():
 
 func _physics_process(delta):
 	# Add the gravity.
-	
+		
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	else:
@@ -35,4 +35,15 @@ func _physics_process(delta):
 	var direction = 1 # Right
 	velocity.x = direction * SPEED
 	
+	
 	move_and_slide()
+	
+	# Check if dead
+	if self.get_position().y > 500:
+		die()
+		
+func die():
+	queue_free()
+	GameState.isPlaying = false
+	GameState.updateHighscore()
+	get_tree().change_scene_to_file("res://start_menu.tscn")

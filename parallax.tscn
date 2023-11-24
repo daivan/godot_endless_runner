@@ -14,7 +14,7 @@ scale = Vector2(0.600926, 0.600926)
 texture = ExtResource("2_116jr")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1162, 0)
+motion_mirroring = Vector2(1160, 0)
 
 [node name="BackerHills" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
