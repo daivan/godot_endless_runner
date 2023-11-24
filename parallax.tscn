@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2yq75gabwrjb"]
+
+[ext_resource type="Script" path="res://parallax.gd" id="1_hip18"]
+[ext_resource type="Texture2D" uid="uid://b1lfmdobiv52k" path="res://assets/parallax/Sky.png" id="2_116jr"]
+[ext_resource type="Texture2D" uid="uid://dpmko8lsn4as1" path="res://assets/parallax/Hills_2.png" id="3_a0er1"]
+[ext_resource type="Texture2D" uid="uid://b66s6ioy0yynn" path="res://assets/parallax/Hills_1.png" id="4_8ye7b"]
+
+[node name="Parallax" type="ParallaxBackground"]
+script = ExtResource("1_hip18")
+
+[node name="Sky" type="Sprite2D" parent="."]
+position = Vector2(575.889, 327.5)
+scale = Vector2(0.600926, 0.600926)
+texture = ExtResource("2_116jr")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1162, 0)
+
+[node name="BackerHills" type="Sprite2D" parent="ParallaxLayer2"]
+texture_filter = 1
+position = Vector2(-138, -171)
+scale = Vector2(0.60463, 0.60463)
+texture = ExtResource("3_a0er1")
+centered = false
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1301, 0)
+
+[node name="BackgroundHills" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+position = Vector2(-226, -110)
+scale = Vector2(0.677604, 0.60463)
+texture = ExtResource("4_8ye7b")
+centered = false

@@ -12,6 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_ojr1t")
 
 [node name="HighScoreLabel" type="Label" parent="."]
+layout_mode = 0
 offset_left = 1.0
 offset_top = 29.0
 offset_right = 88.0
@@ -25,6 +26,7 @@ offset_bottom = 23.0
 text = "Score: "
 
 [node name="HighScoreText" type="Label" parent="."]
+layout_mode = 0
 offset_left = 91.0
 offset_top = 29.0
 offset_right = 131.0
