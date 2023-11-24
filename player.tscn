@@ -136,18 +136,18 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ax6sb"]
-size = Vector2(33, 48.5)
+size = Vector2(48.25, 113)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_awkwu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(21.3834, -12.375)
-scale = Vector2(0.101507, 0.101507)
+position = Vector2(56.6285, 20)
+scale = Vector2(0.216312, 0.216312)
 sprite_frames = SubResource("SpriteFrames_1rc3q")
 animation = &"jump"
-frame_progress = 0.256142
+frame_progress = 0.522109
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, -14.25)
+position = Vector2(32.125, 11.5)
 shape = SubResource("RectangleShape2D_ax6sb")

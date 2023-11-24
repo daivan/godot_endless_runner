@@ -1,11 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://flrp62ecrwtl"]
 
 [ext_resource type="Script" path="res://obstacle.gd" id="1_vxne2"]
+[ext_resource type="Texture2D" uid="uid://snri0q0h5jk" path="res://assets/Tiles/Mace.png" id="2_ey7x0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wr4bp"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ra60t"]
-load_path = "res://.godot/imported/tile_0006.png-032b46da9760b91fd99cabd617a39ad9.ctex"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xb0ji"]
 size = Vector2(22, 23)
@@ -17,7 +15,9 @@ script = ExtResource("1_vxne2")
 shape = SubResource("RectangleShape2D_wr4bp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("CompressedTexture2D_ra60t")
+position = Vector2(-1.05555, -0.999998)
+scale = Vector2(0.208333, 0.208333)
+texture = ExtResource("2_ey7x0")
 
 [node name="VisibleNotifier" type="VisibleOnScreenNotifier2D" parent="."]
 
