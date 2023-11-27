@@ -1,0 +1,78 @@
+[gd_scene load_steps=17 format=3 uid="uid://bhb1vur8ijgwh"]
+
+[ext_resource type="Texture2D" uid="uid://du2tta1glwa24" path="res://assets/player/Idle (1).png" id="1_307he"]
+[ext_resource type="Texture2D" uid="uid://c70m8kifm5int" path="res://assets/player/Idle (2).png" id="2_mf8ld"]
+[ext_resource type="Texture2D" uid="uid://bpppv2ufs1d57" path="res://assets/player/Idle (3).png" id="3_s3y5e"]
+[ext_resource type="Texture2D" uid="uid://b7xae0d8bwcij" path="res://assets/player/Idle (4).png" id="4_vrfk0"]
+[ext_resource type="Texture2D" uid="uid://qvxrk85m0vs3" path="res://assets/player/Idle (5).png" id="5_in1fi"]
+[ext_resource type="Texture2D" uid="uid://fooydcldb05b" path="res://assets/player/Idle (6).png" id="6_pv3py"]
+[ext_resource type="Texture2D" uid="uid://d1dlkanx13kny" path="res://assets/player/Idle (7).png" id="7_ypi46"]
+[ext_resource type="Texture2D" uid="uid://se46c7prmtay" path="res://assets/player/Idle (8).png" id="8_u0v0p"]
+[ext_resource type="Texture2D" uid="uid://b1fd3hexk6iu3" path="res://assets/player/Idle (9).png" id="9_wgcpr"]
+[ext_resource type="Texture2D" uid="uid://c8vq6ybp5njgj" path="res://assets/player/Idle (10).png" id="10_u1v2r"]
+[ext_resource type="Texture2D" uid="uid://dkvcc6oqcjnwn" path="res://assets/player/Idle (11).png" id="11_vx3n4"]
+[ext_resource type="Texture2D" uid="uid://c4rwvdyx3855l" path="res://assets/player/Idle (12).png" id="12_fj3hp"]
+[ext_resource type="Texture2D" uid="uid://7asyb8b1uy53" path="res://assets/player/Idle (13).png" id="13_qkkfr"]
+[ext_resource type="Texture2D" uid="uid://cxplbfr61amj0" path="res://assets/player/Idle (14).png" id="14_5ddoe"]
+[ext_resource type="Texture2D" uid="uid://bqbusx1fp51rh" path="res://assets/player/Idle (15).png" id="15_ykh0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmv5j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_307he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mf8ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s3y5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vrfk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_in1fi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pv3py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ypi46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u0v0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wgcpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_u1v2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vx3n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fj3hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qkkfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5ddoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ykh0k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
+
+[node name="BoyAnimator" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_nmv5j")
+autoplay = "default"
+frame_progress = 0.792718

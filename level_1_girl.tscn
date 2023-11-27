@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://d1lea55kf0wsf"]
+
+[ext_resource type="Script" path="res://level_1.gd" id="1_x1850"]
+[ext_resource type="PackedScene" uid="uid://dcs01f0nvu1d6" path="res://obstacle_spawner.tscn" id="2_4dmmh"]
+[ext_resource type="PackedScene" uid="uid://cl8ea2uouf7t6" path="res://girl_player.tscn" id="3_uxm3s"]
+[ext_resource type="PackedScene" uid="uid://clqvy8hg1g1um" path="res://ui.tscn" id="4_soao1"]
+[ext_resource type="PackedScene" uid="uid://b2yq75gabwrjb" path="res://parallax.tscn" id="5_an2mc"]
+
+[node name="Level1Girl" type="Node2D"]
+script = ExtResource("1_x1850")
+
+[node name="ObstacleSpawner" parent="." instance=ExtResource("2_4dmmh")]
+position = Vector2(603, 82)
+
+[node name="GirlPlayer" parent="." instance=ExtResource("3_uxm3s")]
+position = Vector2(448, 332)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="GirlPlayer"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(448, 332)
+
+[node name="UserInterface" parent="Camera2D" instance=ExtResource("4_soao1")]
+custom_minimum_size = Vector2(700, 400)
+offset_left = -171.0
+offset_top = -132.0
+offset_right = 529.0
+offset_bottom = 268.0
+
+[node name="Parallax" parent="." instance=ExtResource("5_an2mc")]
+
+[node name="FloorTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="FloorTimer" to="." method="_on_floor_timer_timeout"]

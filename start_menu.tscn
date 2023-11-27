@@ -1,7 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://01d34t34ocns"]
+[gd_scene load_steps=7 format=3 uid="uid://01d34t34ocns"]
 
+[ext_resource type="Script" path="res://start_menu.gd" id="1_0s7vt"]
 [ext_resource type="PackedScene" uid="uid://j3gdu6lebxe7" path="res://menu.tscn" id="1_yogfn"]
+[ext_resource type="PackedScene" uid="uid://cmmucwxsmwaq3" path="res://girl_animator.tscn" id="2_bwi58"]
+[ext_resource type="PackedScene" uid="uid://bhb1vur8ijgwh" path="res://boy_animator.tscn" id="3_0nvce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5l7s"]
+size = Vector2(256, 277)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrafm"]
+size = Vector2(231, 273)
 
 [node name="StartMenu" type="Node2D"]
+script = ExtResource("1_0s7vt")
 
 [node name="Menu" parent="." instance=ExtResource("1_yogfn")]
+offset_left = 47.0
+offset_top = 27.0
+offset_right = 47.0
+offset_bottom = 27.0
+
+[node name="GirlAnimator" parent="." instance=ExtResource("2_bwi58")]
+position = Vector2(103, 289)
+
+[node name="BoyAnimator" parent="." instance=ExtResource("3_0nvce")]
+position = Vector2(628, 294)
+
+[node name="SelectGirl" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectGirl"]
+position = Vector2(139, 304.5)
+shape = SubResource("RectangleShape2D_h5l7s")
+
+[node name="SelectBoy" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SelectBoy"]
+position = Vector2(567.5, 290)
+shape = SubResource("RectangleShape2D_lrafm")
+
+[connection signal="input_event" from="SelectGirl" to="." method="_on_select_girl_input_event"]
+[connection signal="input_event" from="SelectBoy" to="." method="_on_select_boy_input_event"]

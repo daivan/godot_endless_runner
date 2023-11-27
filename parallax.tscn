@@ -13,22 +13,23 @@ position = Vector2(575.889, 327.5)
 scale = Vector2(0.600926, 0.600926)
 texture = ExtResource("2_116jr")
 
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1029, 0)
+
+[node name="BackgroundHills" type="Sprite2D" parent="ParallaxLayer"]
+texture_filter = 1
+position = Vector2(-223, -93)
+scale = Vector2(0.53648, 0.478704)
+texture = ExtResource("4_8ye7b")
+centered = false
+
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_mirroring = Vector2(1160, 0)
 
 [node name="BackerHills" type="Sprite2D" parent="ParallaxLayer2"]
 texture_filter = 1
-position = Vector2(-138, -171)
+position = Vector2(-217, -73)
 scale = Vector2(0.60463, 0.60463)
 texture = ExtResource("3_a0er1")
-centered = false
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-motion_mirroring = Vector2(1301, 0)
-
-[node name="BackgroundHills" type="Sprite2D" parent="ParallaxLayer"]
-texture_filter = 1
-position = Vector2(-226, -110)
-scale = Vector2(0.677604, 0.60463)
-texture = ExtResource("4_8ye7b")
 centered = false

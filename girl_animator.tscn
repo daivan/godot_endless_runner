@@ -1,0 +1,82 @@
+[gd_scene load_steps=18 format=3 uid="uid://cmmucwxsmwaq3"]
+
+[ext_resource type="Texture2D" uid="uid://bvjks1fpf825m" path="res://assets/player/girl/Idle (1).png" id="1_6ktrr"]
+[ext_resource type="Texture2D" uid="uid://dfua83dac87gc" path="res://assets/player/girl/Idle (2).png" id="2_hhs4n"]
+[ext_resource type="Texture2D" uid="uid://b60bwiu2wyt4h" path="res://assets/player/girl/Idle (3).png" id="3_qcwep"]
+[ext_resource type="Texture2D" uid="uid://grpqgujpwswv" path="res://assets/player/girl/Idle (4).png" id="4_spsog"]
+[ext_resource type="Texture2D" uid="uid://bwkckqfgllqqp" path="res://assets/player/girl/Idle (5).png" id="5_57kjl"]
+[ext_resource type="Texture2D" uid="uid://qtc2073hc62u" path="res://assets/player/girl/Idle (6).png" id="6_f6b60"]
+[ext_resource type="Texture2D" uid="uid://c1kprm3tx5sa7" path="res://assets/player/girl/Idle (7).png" id="7_e3g7l"]
+[ext_resource type="Texture2D" uid="uid://cp0q1mhu8xswa" path="res://assets/player/girl/Idle (8).png" id="8_pd2mu"]
+[ext_resource type="Texture2D" uid="uid://c3jfrhn2l3fk4" path="res://assets/player/girl/Idle (9).png" id="9_aoc4l"]
+[ext_resource type="Texture2D" uid="uid://ddj7je0q057ed" path="res://assets/player/girl/Idle (10).png" id="10_xefjl"]
+[ext_resource type="Texture2D" uid="uid://cpnd07lsj452w" path="res://assets/player/girl/Idle (11).png" id="11_vjerx"]
+[ext_resource type="Texture2D" uid="uid://bng4qs1qcjvx6" path="res://assets/player/girl/Idle (12).png" id="12_o6vwh"]
+[ext_resource type="Texture2D" uid="uid://cjmy5sbco64w" path="res://assets/player/girl/Idle (13).png" id="13_1pr05"]
+[ext_resource type="Texture2D" uid="uid://cyloxbjsc0qql" path="res://assets/player/girl/Idle (14).png" id="14_h4vl8"]
+[ext_resource type="Texture2D" uid="uid://dbgg42txj4jam" path="res://assets/player/girl/Idle (15).png" id="15_o482j"]
+[ext_resource type="Texture2D" uid="uid://bhr7yyqi4vscp" path="res://assets/player/girl/Idle (16).png" id="16_hj8we"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ti0e1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6ktrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hhs4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qcwep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_spsog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_57kjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_f6b60")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e3g7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pd2mu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aoc4l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xefjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vjerx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o6vwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1pr05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_h4vl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o482j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hj8we")
+}],
+"loop": true,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="GirlAnimator" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ti0e1")
+autoplay = "default"
+frame_progress = 0.62934

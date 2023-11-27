@@ -142,8 +142,8 @@ size = Vector2(48.25, 113)
 script = ExtResource("1_awkwu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(56.6285, 20)
-scale = Vector2(0.216312, 0.216312)
+position = Vector2(60, 20)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_1rc3q")
 animation = &"jump"
 frame_progress = 0.522109

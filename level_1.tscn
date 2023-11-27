@@ -9,14 +9,19 @@
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_5ix56")
 
+[node name="ObstacleSpawner" parent="." instance=ExtResource("3_sisf4")]
+position = Vector2(603, 82)
+
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_8aukx")]
 position = Vector2(282, 214)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+position = Vector2(166, -22)
 remote_path = NodePath("../../Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(386, 182)
+visible = false
+position = Vector2(450, 200)
 
 [node name="UserInterface" parent="Camera2D" instance=ExtResource("3_k7pgf")]
 custom_minimum_size = Vector2(700, 400)
@@ -24,9 +29,6 @@ offset_left = -171.0
 offset_top = -132.0
 offset_right = 529.0
 offset_bottom = 268.0
-
-[node name="ObstacleSpawner" parent="." instance=ExtResource("3_sisf4")]
-position = Vector2(603, 82)
 
 [node name="Parallax" parent="." instance=ExtResource("6_0x0wj")]
 
